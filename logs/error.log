@@ -1,0 +1,539 @@
+2024-05-03 21:45:22 error: [Cake\Http\Exception\MissingControllerException] Controller class Users could not be found. in /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 338
+Exception Attributes: array (
+  'controller' => 'Users',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+  'class' => 'Users',
+)
+Stack Trace:
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:75
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/BaseApplication.php:320
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:176
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /var/www/html/bookmarker/webroot/index.php:40
+- [main]:
+
+Request URL: /users
+2024-05-03 22:01:08 error: [Cake\Http\Exception\InvalidCsrfTokenException] Missing or invalid CSRF cookie. in /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php on line 396
+Stack Trace:
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:172
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:162
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /var/www/html/bookmarker/webroot/index.php:40
+- [main]:
+
+Request URL: /users/add
+Referer URL: http://localhost:8765/users/add
+2024-05-03 22:13:34 error: [Cake\Controller\Exception\MissingActionException] Action UsersController::tags() could not be found, or is not accessible. in /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/Controller.php on line 539
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'tags',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:135
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:115
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/BaseApplication.php:325
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:176
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /var/www/html/bookmarker/webroot/index.php:40
+- [main]:
+
+Request URL: /users/tags
+2024-05-03 22:26:54 error: [Cake\Http\Exception\MissingControllerException] Controller class Login could not be found. in /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 338
+Exception Attributes: array (
+  'controller' => 'Login',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+  'class' => 'Login',
+)
+Stack Trace:
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:75
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/BaseApplication.php:320
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:176
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /var/www/html/bookmarker/webroot/index.php:40
+- [main]:
+
+Request URL: /login
+2024-05-03 22:31:54 error: [Error] Call to a member function allow() on null in /var/www/html/bookmarker/src/Controller/AppController.php on line 62
+Stack Trace:
+- /var/www/html/bookmarker/src/Controller/UsersController.php:28
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/Controller.php:242
+- [internal]:??
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:88
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/BaseApplication.php:320
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:176
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /var/www/html/bookmarker/webroot/index.php:40
+- [main]:
+
+Request URL: /users/login?redirect=%2Fusers%2F
+Referer URL: http://localhost:8765/users/login?redirect=%2Fusers%2F
+2024-05-03 22:31:55 warning: Unable to emit headers. Headers sent in file=/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php line=37
+Request URL: /users/login?redirect=%2Fusers%2F
+Referer URL: http://localhost:8765/users/login?redirect=%2Fusers%2F
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:31:55 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/login?redirect=%2Fusers%2F
+Referer URL: http://localhost:8765/users/login?redirect=%2Fusers%2F
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 164
+Cake\Http\ResponseEmitter->emitStatusLine() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 74
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:31:55 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/login?redirect=%2Fusers%2F
+Referer URL: http://localhost:8765/users/login?redirect=%2Fusers%2F
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:31:55 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/login?redirect=%2Fusers%2F
+Referer URL: http://localhost:8765/users/login?redirect=%2Fusers%2F
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:32:01 error: [Error] Call to a member function allow() on null in /var/www/html/bookmarker/src/Controller/AppController.php on line 62
+Stack Trace:
+- /var/www/html/bookmarker/src/Controller/UsersController.php:28
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/Controller.php:242
+- [internal]:??
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:88
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/BaseApplication.php:320
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:176
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /var/www/html/bookmarker/webroot/index.php:40
+- [main]:
+
+Request URL: /users/
+2024-05-03 22:32:02 warning: Unable to emit headers. Headers sent in file=/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php line=37
+Request URL: /users/
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:32:02 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 164
+Cake\Http\ResponseEmitter->emitStatusLine() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 74
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:32:02 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:32:02 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:32:10 error: [Error] Call to a member function allow() on null in /var/www/html/bookmarker/src/Controller/AppController.php on line 62
+Stack Trace:
+- /var/www/html/bookmarker/src/Controller/UsersController.php:28
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/Controller.php:242
+- [internal]:??
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:88
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/BaseApplication.php:320
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:176
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /var/www/html/bookmarker/webroot/index.php:40
+- [main]:
+
+Request URL: /users/edit
+2024-05-03 22:32:11 warning: Unable to emit headers. Headers sent in file=/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php line=37
+Request URL: /users/edit
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:32:11 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/edit
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 164
+Cake\Http\ResponseEmitter->emitStatusLine() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 74
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:32:11 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/edit
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:32:11 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/edit
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:36:58 error: [Error] Call to a member function allow() on null in /var/www/html/bookmarker/src/Controller/UsersController.php on line 30
+Stack Trace:
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/Controller.php:242
+- [internal]:??
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:88
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/BaseApplication.php:320
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:176
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /var/www/html/bookmarker/webroot/index.php:40
+- [main]:
+
+Request URL: /users/edit
+2024-05-03 22:36:58 warning: Unable to emit headers. Headers sent in file=/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php line=37
+Request URL: /users/edit
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:36:58 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/edit
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 164
+Cake\Http\ResponseEmitter->emitStatusLine() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 74
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:36:58 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/edit
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:36:58 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/edit
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:37:12 error: [Error] Call to a member function allow() on null in /var/www/html/bookmarker/src/Controller/UsersController.php on line 30
+Stack Trace:
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/Controller.php:242
+- [internal]:??
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:88
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/BaseApplication.php:320
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:176
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /var/www/html/bookmarker/webroot/index.php:40
+- [main]:
+
+Request URL: /users/edit
+2024-05-03 22:37:13 warning: Unable to emit headers. Headers sent in file=/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php line=37
+Request URL: /users/edit
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:37:13 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/edit
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 164
+Cake\Http\ResponseEmitter->emitStatusLine() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 74
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:37:13 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/edit
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:37:13 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/edit
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:37:16 error: [Error] Call to a member function allow() on null in /var/www/html/bookmarker/src/Controller/UsersController.php on line 30
+Stack Trace:
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/Controller.php:242
+- [internal]:??
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:88
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/BaseApplication.php:320
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:176
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /var/www/html/bookmarker/webroot/index.php:40
+- [main]:
+
+Request URL: /users
+2024-05-03 22:37:17 warning: Unable to emit headers. Headers sent in file=/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php line=37
+Request URL: /users
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:37:17 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 164
+Cake\Http\ResponseEmitter->emitStatusLine() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 74
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:37:17 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:37:17 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:37:25 error: [Error] Call to a member function allow() on null in /var/www/html/bookmarker/src/Controller/UsersController.php on line 30
+Stack Trace:
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/Controller.php:242
+- [internal]:??
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:88
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/BaseApplication.php:320
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:86
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:176
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:157
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:189
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:149
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:82
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Runner.php:67
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php:99
+- /var/www/html/bookmarker/webroot/index.php:40
+- [main]:
+
+Request URL: /users/add
+2024-05-03 22:37:25 warning: Unable to emit headers. Headers sent in file=/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php line=37
+Request URL: /users/add
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:37:25 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/add
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 164
+Cake\Http\ResponseEmitter->emitStatusLine() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 74
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:37:25 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/add
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+
+2024-05-03 22:37:25 warning: Cannot modify header information - headers already sent by (output started at /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Error/Renderer/HtmlErrorRenderer.php:37)
+Request URL: /users/add
+Trace:
+/var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter->emitHeaders() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 75
+Cake\Http\ResponseEmitter->emit() /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/Server.php, line 137
+Cake\Http\Server->emit() /var/www/html/bookmarker/webroot/index.php, line 40
+[main]
+

@@ -1,0 +1,37 @@
+2024-05-03 21:42:47 error: [Cake\Database\Exception\MissingConnectionException] Connection to Mysql could not be established: SQLSTATE[HY000] [2002] No such file or directory in /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Driver.php on line 144
+Exception Attributes: array (
+  'driver' => 'Mysql',
+  'reason' => 'SQLSTATE[HY000] [2002] No such file or directory',
+)
+Stack Trace:
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:165
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:217
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Connection.php:542
+- /var/www/html/bookmarker/vendor/cakephp/bake/src/Command/ModelCommand.php:87
+- /var/www/html/bookmarker/vendor/cakephp/bake/src/Command/AllCommand.php:115
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Console/BaseCommand.php:190
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Console/CommandRunner.php:334
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Console/CommandRunner.php:172
+- /var/www/html/bookmarker/bin/cake.php:12
+- [main]:
+
+Caused by: [PDOException] SQLSTATE[HY000] [2002] No such file or directory in /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Driver.php on line 132
+Stack Trace:
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Driver.php:132
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Driver.php:142
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:165
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Schema/SchemaDialect.php:51
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:217
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:53
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Connection.php:542
+- /var/www/html/bookmarker/vendor/cakephp/bake/src/Command/ModelCommand.php:87
+- /var/www/html/bookmarker/vendor/cakephp/bake/src/Command/AllCommand.php:115
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Console/BaseCommand.php:190
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Console/CommandRunner.php:334
+- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Console/CommandRunner.php:172
+- /var/www/html/bookmarker/bin/cake.php:12
+- [main]:
+
