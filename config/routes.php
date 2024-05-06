@@ -23,13 +23,13 @@
 
 use Cake\Routing\Route\DashedRoute;
 use Cake\Routing\RouteBuilder;
+use Cake\Routing\Router;
+Router::defaultRouteClass(DashedRoute::class);
 
-$routes->setRouteClass(DashedRoute::class);
-
-// New route we're adding for our tagged action.
+// Nueva ruta que añadimos para nuestra acción tagged
 // The trailing `*` tells CakePHP that this action has
 // passed parameters.
-$routes->scope(
+Router::scope(
     '/bookmarks',
     ['controller' => 'Bookmarks'],
     function ($routes) {
@@ -37,7 +37,7 @@ $routes->scope(
     }
 );
 
-$routes->scope('/', function ($routes) {
+Router::scope('/', function ($routes) {
     // Connect the default home and /pages/* routes.
     $routes->connect('/', [
         'controller' => 'Pages',
@@ -51,13 +51,13 @@ $routes->scope('/', function ($routes) {
     // Connect the conventions based default routes.
     $routes->fallbacks();
 });
-
-
 /*
  * This file is loaded in the context of the `Application` class.
   * So you can use  `$this` to reference the application class instance
   * if required.
  */
+
+
 return function (RouteBuilder $routes): void {
     /*
      * The default class to use for all routes
