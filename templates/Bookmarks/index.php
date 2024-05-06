@@ -28,9 +28,9 @@
                     <td><?= h($bookmark->created) ?></td>
                     <td><?= h($bookmark->modified) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $bookmark->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $bookmark->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $bookmark->id], ['confirm' => __('Are you sure you want to delete # {0}?', $bookmark->id)]) ?>
+                        <?= $this->Html->link(__('Vista'), ['action' => 'view', $bookmark->id]) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $bookmark->id]) ?>
+                        <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $bookmark->id], ['confirm' => __('Deseas eliminar? # {0}?', $bookmark->id)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

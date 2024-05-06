@@ -64,7 +64,7 @@ class TagsTable extends Table
     {
         $validator
             ->scalar('title')
-            ->maxLength('title', 255)
+            ->maxLength('title', 191)
             ->allowEmptyString('title')
             ->add('title', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 

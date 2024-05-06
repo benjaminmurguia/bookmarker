@@ -18,6 +18,11 @@ use Cake\ORM\Entity;
  */
 class User extends Entity
 {
+    protected function _setPassword($value)
+    {
+        $hasher = new DefaultPasswordHasher();
+        return $hasher->hash($value);
+    }
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
      *
@@ -43,11 +48,4 @@ class User extends Entity
     protected $_hidden = [
         'password',
     ];
-
-    //comentarios
-    protected function _setPassword($value)
-    {
-        $hasher = new DefaultPasswordHasher();//HASH PARA LA CONTRASEÑA
-        return $hasher->hash($value);
-    }
 }

@@ -11,6 +11,32 @@ namespace App\Controller;
  */
 class TagsController extends AppController
 {
+    /* public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['logout']);
+    } */
+    public function isAuthorized($user)
+    {
+        $action = $this->request->getParam('action');
+
+        // The add and index actions are always allowed.
+        if (in_array($action, ['index', 'edit','views','add', 'tags'])) {
+            return true;
+        }
+        // All other actions require an id.
+        if (!$this->request->getParam('pass.0')) {
+            return false;
+        }
+
+        // Check that the bookmark belongs to the current user.
+        $id = $this->request->getParam('pass.0');
+        $bookmark = $this->Bookmarks->get($id);
+        if ($bookmark->user_id == $user['id']) {
+            return true;
+        }
+        return parent::isAuthorized($user);
+    }
     /**
      * Index method
      *
@@ -46,7 +72,7 @@ class TagsController extends AppController
      */
     public function add()
     {
-        $tag = $this->Tags->newEmptyEntity();
+        $tag = $this->Tags->newEmptyEntity($this->request->getData());
         if ($this->request->is('post')) {
             $tag = $this->Tags->patchEntity($tag, $this->request->getData());
             if ($this->Tags->save($tag)) {

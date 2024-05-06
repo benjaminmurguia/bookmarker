@@ -7,9 +7,9 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
+            <h4 class="heading"><?= __('Acciones') ?></h4>
             <?= $this->Html->link(__('Edit Tag'), ['action' => 'edit', $tag->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Tag'), ['action' => 'delete', $tag->id], ['confirm' => __('Are you sure you want to delete # {0}?', $tag->id), 'class' => 'side-nav-item']) ?>
+            <?= $this->Form->postLink(__('Delete Tag'), ['action' => 'delete', $tag->id], ['confirm' => __('deseas eliminar? # {0}?', $tag->id), 'class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('List Tags'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('New Tag'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
@@ -19,7 +19,7 @@
             <h3><?= h($tag->title) ?></h3>
             <table>
                 <tr>
-                    <th><?= __('Title') ?></th>
+                    <th><?= __('Título') ?></th>
                     <td><?= h($tag->title) ?></td>
                 </tr>
                 <tr>
@@ -27,28 +27,29 @@
                     <td><?= $this->Number->format($tag->id) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Created') ?></th>
+                    <th><?= __('Creado') ?></th>
                     <td><?= h($tag->created) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Modified') ?></th>
+                    <th><?= __('Modificado') ?></th>
                     <td><?= h($tag->modified) ?></td>
                 </tr>
             </table>
             <div class="related">
-                <h4><?= __('Related Bookmarks') ?></h4>
+                <h4><?= __('Marcadores Relacionados') ?></h4>
                 <?php if (!empty($tag->bookmarks)) : ?>
                 <div class="table-responsive">
                     <table>
                         <tr>
                             <th><?= __('Id') ?></th>
-                            <th><?= __('User Id') ?></th>
-                            <th><?= __('Title') ?></th>
+                            <th><?= __('IdUsuario') ?></th>
+                            
+                            <th><?= __('Título') ?></th>
                             <th><?= __('Description') ?></th>
                             <th><?= __('Url') ?></th>
-                            <th><?= __('Created') ?></th>
-                            <th><?= __('Modified') ?></th>
-                            <th class="actions"><?= __('Actions') ?></th>
+                            <th><?= __('Creado') ?></th>
+                            <th><?= __('Modificado') ?></th>
+                            <th class="actions"><?= __('Acciones') ?></th>
                         </tr>
                         <?php foreach ($tag->bookmarks as $bookmarks) : ?>
                         <tr>
@@ -60,9 +61,9 @@
                             <td><?= h($bookmarks->created) ?></td>
                             <td><?= h($bookmarks->modified) ?></td>
                             <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'Bookmarks', 'action' => 'view', $bookmarks->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'Bookmarks', 'action' => 'edit', $bookmarks->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Bookmarks', 'action' => 'delete', $bookmarks->id], ['confirm' => __('Are you sure you want to delete # {0}?', $bookmarks->id)]) ?>
+                                <?= $this->Html->link(__('Vista'), ['controller' => 'Bookmarks', 'action' => 'view', $bookmarks->id]) ?>
+                                <?= $this->Html->link(__('Editar'), ['controller' => 'Bookmarks', 'action' => 'edit', $bookmarks->id]) ?>
+                                <?= $this->Form->postLink(__('Eliminar'), ['controller' => 'Bookmarks', 'action' => 'delete', $bookmarks->id], ['confirm' => __('deseas eliminar? # {0}?', $bookmarks->id)]) ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>

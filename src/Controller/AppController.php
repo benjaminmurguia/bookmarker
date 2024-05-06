@@ -28,20 +28,16 @@ use Cake\Controller\Controller;
  */
 class AppController extends Controller
 {
-    /**
-     * Initialization hook method.
-     *
-     * Use this method to add common initialization code like loading components.
-     *
-     * e.g. `$this->loadComponent('FormProtection');`
-     *
-     * @return void
-     */
+    public function isAuthorized($user)
+    {
+        return false;
+    }
     public function initialize(): void
     {
+        //$this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
-            'authorize'=> 'Controller',//linea añadida
+            'authorize'=> 'Controller',//added this line
             'authenticate' => [
                 'Form' => [
                     'fields' => [
@@ -54,6 +50,10 @@ class AppController extends Controller
                 'controller' => 'Users',
                 'action' => 'login'
             ],
+            'loginRedirect' => [
+                'controller' => 'bookmarks', // Controlador al que redirigir después de iniciar sesión correctamente
+                'action' => 'index'
+            ],
             'unauthorizedRedirect' => $this->referer() // If unauthorized, return them to page they were just on
         ]);
 
@@ -61,19 +61,23 @@ class AppController extends Controller
         // continues to work.
         $this->Auth->allow(['display']);
     }
-    public function isAuthorized($user)
-    {
-        return true;
-    }
+    /**
+     * Initialization hook method.
+     *
+     * Use this method to add common initialization code like loading components.
+     *
+     * e.g. `$this->loadComponent('FormProtection');`
+     *
+     * @return void
+     */
     /*public function initialize(): void
     {
         parent::initialize();
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-        */
+*/
         /*
-        
          * Enable the following component for recommended CakePHP form protection settings.
          * see https://book.cakephp.org/4/en/controllers/components/form-protection.html
          */

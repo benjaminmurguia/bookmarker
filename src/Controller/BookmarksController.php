@@ -11,13 +11,17 @@ namespace App\Controller;
  */
 class BookmarksController extends AppController
 {
-
+    /* public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['logout']);
+    } */
     public function isAuthorized($user)
     {
         $action = $this->request->getParam('action');
 
         // The add and index actions are always allowed.
-        if (in_array($action, ['index', 'add', 'tags'])) {
+        if (in_array($action, ['index', 'edit','views','add', 'tags'])) {
             return true;
         }
         // All other actions require an id.
@@ -35,15 +39,14 @@ class BookmarksController extends AppController
     }
     public function tags()
     {
-        // The 'pass' key is provided by CakePHP and contains all
-        // the passed URL path segments in the request.
+        // La clave 'contraseña' la proporciona CakePHP y contiene todo
+         // los segmentos de ruta URL pasados en la solicitud.
         $tags = $this->request->getParam('pass');
 
         // Use the BookmarksTable to find tagged bookmarks.
         $bookmarks = $this->Bookmarks->find('tagged', [
-                'tags' => $tags
-            ])
-            ->all();
+            'tags' => $tags
+        ]);
 
         // Pass variables into the view template context.
         $this->set([
@@ -51,7 +54,6 @@ class BookmarksController extends AppController
             'tags' => $tags
         ]);
     }
-
     /**
      * Index method
      *
@@ -60,12 +62,11 @@ class BookmarksController extends AppController
     public function index()
     {
         $this->paginate = [
-            'conditions' => [
-                'Bookmarks.user_id' => $this->Auth->user('id'),
-            ]
+            'contain' => ['Users'],
         ];
-        $this->set('bookmarks', $this->paginate($this->Bookmarks));
-        $this->viewBuilder()->setOption('serialize', ['bookmarks']);
+        $bookmarks = $this->paginate($this->Bookmarks);
+
+        $this->set(compact('bookmarks'));
     }
 
     /**
@@ -91,20 +92,21 @@ class BookmarksController extends AppController
      */
     public function add()
     {
-        $bookmark = $this->Bookmarks->newEntity($this->request->getData());
+        $bookmark = $this->Bookmarks->newEmptyEntity($this->request->getData());
         if ($this->request->is('post')) {
             $bookmark = $this->Bookmarks->patchEntity($bookmark, $this->request->getData());
-            $bookmark->user_id = $this->Auth->user('id');
             if ($this->Bookmarks->save($bookmark)) {
-                $this->Flash->success('The bookmark has been saved.');
+                $this->Flash->success(__('The bookmark has been saved.'));
+
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error('The bookmark could not be saved. Please, try again.');
+            $this->Flash->error(__('The bookmark could not be saved. Please, try again.'));
         }
-        $tags = $this->Bookmarks->Tags->find('list')->all();
-        $this->set(compact('bookmark', 'tags'));
-        $this->viewBuilder()->setOption('serialize', ['bookmark']);
+        $users = $this->Bookmarks->Users->find('list', ['limit' => 200])->all();
+        $tags = $this->Bookmarks->Tags->find('list', ['limit' => 200])->all();
+        $this->set(compact('bookmark', 'users', 'tags'));
     }
+
     /**
      * Edit method
      *
@@ -115,20 +117,20 @@ class BookmarksController extends AppController
     public function edit($id = null)
     {
         $bookmark = $this->Bookmarks->get($id, [
-            'contain' => ['Tags']
+            'contain' => ['Tags'],
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $bookmark = $this->Bookmarks->patchEntity($bookmark, $this->request->getData());
-            $bookmark->user_id = $this->Auth->user('id');
             if ($this->Bookmarks->save($bookmark)) {
-                $this->Flash->success('The bookmark has been saved.');
+                $this->Flash->success(__('The bookmark has been saved.'));
+
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error('The bookmark could not be saved. Please, try again.');
+            $this->Flash->error(__('The bookmark could not be saved. Please, try again.'));
         }
-        $tags = $this->Bookmarks->Tags->find('list')->all();
-        $this->set(compact('bookmark', 'tags'));
-        $this->viewBuilder()->setOption('serialize', ['bookmark']);
+        $users = $this->Bookmarks->Users->find('list', ['limit' => 200])->all();
+        $tags = $this->Bookmarks->Tags->find('list', ['limit' => 200])->all();
+        $this->set(compact('bookmark', 'users', 'tags'));
     }
 
     /**

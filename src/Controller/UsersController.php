@@ -11,7 +11,38 @@ namespace App\Controller;
  */
 class UsersController extends AppController
 {
+    /* public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['logout']);
+    } */
+    public function isAuthorized($user)
+    {
+        $action = $this->request->getParam('action');
 
+        // The add and index actions are always allowed.
+        if (in_array($action, ['index', 'edit','views','add', 'tags'])) {
+            return true;
+        }
+        // All other actions require an id.
+        if (!$this->request->getParam('pass.0')) {
+            return false;
+        }
+
+        // Check that the bookmark belongs to the current user.
+        $id = $this->request->getParam('pass.0');
+        $user = $this->Users->get($id);
+        if ($user->id == $user['id']) {
+            return true;
+        }
+        return parent::isAuthorized($user);
+    }
+    
+    public function logout()
+    {
+        $this->Flash->success('You are now logged out.');
+        return $this->redirect($this->Auth->logout());
+    }
     public function login()
     {
         if ($this->request->is('post')) {
@@ -22,18 +53,6 @@ class UsersController extends AppController
             }
             $this->Flash->error('Your username or password is incorrect.');
         }
-    }
-    public function initialize(): void
-    {
-        parent::initialize();
-        // Add the 'add' action to the allowed actions list.
-        $this->Auth->allow(['logout', 'add']);
-    }
-
-    public function logout()
-    {
-        $this->Flash->success('You are now logged out.');
-        return $this->redirect($this->Auth->logout());
     }
     /**
      * Index method
@@ -70,7 +89,7 @@ class UsersController extends AppController
      */
     public function add()
     {
-        $user = $this->Users->newEmptyEntity();
+        $user = $this->Users->newEmptyEntity($this->request->getData());
         if ($this->request->is('post')) {
             $user = $this->Users->patchEntity($user, $this->request->getData());
             if ($this->Users->save($user)) {

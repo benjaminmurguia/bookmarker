@@ -32,63 +32,26 @@ use Cake\Validation\Validator;
  */
 class BookmarksTable extends Table
 {
-    public function beforeSave($event, $entity, $options)
-    {
-        if ($entity->tag_string) {
-            $entity->tags = $this->_buildTags($entity->tag_string);
-        }
-    }
-
-    protected function _buildTags($tagString)
-    {
-        // Trim tags
-        $newTags = array_map('trim', explode(',', $tagString));
-        // Remove all empty tags
-        $newTags = array_filter($newTags);
-        // Reduce duplicated tags
-        $newTags = array_unique($newTags);
-
-        $out = [];
-        $tags = $this->Tags->find()
-            ->where(['Tags.title IN' => $newTags])->all();
-
-        // Remove existing tags from the list of new tags.
-        foreach ($tags->extract('title') as $existing) {
-            $index = array_search($existing, $newTags);
-            if ($index !== false) {
-                unset($newTags[$index]);
-            }
-        }
-        // Add existing tags.
-        foreach ($tags as $tag) {
-            $out[] = $tag;
-        }
-        // Add new tags.
-        foreach ($newTags as $tag) {
-            $out[] = $this->Tags->newEntity(['title' => $tag]);
-        }
-        return $out;
-    }
-
+    // El argumento $query es una instancia de query.
+    // El array $options contendrá las opciones de 'tags' que pasemos
+    // para encontrar'tagged') en nuestra acción del controlador.
     public function findTagged(Query $query, array $options)
     {
+        $bookmarks = $this->find()
+            ->select(['id', 'url', 'title', 'description']);
+
         if (empty($options['tags'])) {
-            $bookmarks = $query
-                ->select(['Bookmarks.id','Bookmarks.url','Bookmarks.title','Bookmarks.description'])
+            $bookmarks
                 ->leftJoinWith('Tags')
-                ->where(['Tags.title IS' => null])
-                ->group(['Bookmarks.id']);
+                ->where(['Tags.title IS' => null]);
         } else {
-            $bookmarks = $query
-                ->select(['Bookmarks.id','Bookmarks.url','Bookmarks.title','Bookmarks.description'])
+            $bookmarks
                 ->innerJoinWith('Tags')
-                ->where(['Tags.title IN ' => $options['tags']])
-                ->group(['Bookmarks.id']);
+                ->where(['Tags.title IN ' => $options['tags']]);
         }
-        return $query;
+
+        return $bookmarks->group(['Bookmarks.id']);
     }
-
-
     /**
      * Initialize method
      *
@@ -127,6 +90,9 @@ class BookmarksTable extends Table
         $validator
             ->integer('user_id')
             ->notEmptyString('user_id');
+
+        $validator
+            ->allowEmptyFile('image');
 
         $validator
             ->scalar('title')

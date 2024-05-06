@@ -19,7 +19,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <!DOCTYPE html>
 <html>
 <head>
-<?= $this->Flash->render() ?> <!-- linea añadida --> 
+<?= $this->Flash->render() ?> <!-- este comando hace mostrar las advertencias -->
 
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
