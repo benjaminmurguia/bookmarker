@@ -28,16 +28,20 @@ use Cake\Controller\Controller;
  */
 class AppController extends Controller
 {
-    public function isAuthorized($user)
-    {
-        return false;
-    }
+    /**
+     * Initialization hook method.
+     *
+     * Use this method to add common initialization code like loading components.
+     *
+     * e.g. `$this->loadComponent('FormProtection');`
+     *
+     * @return void
+     */
     public function initialize(): void
     {
-        //$this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
-            'authorize'=> 'Controller',//added this line
+            //'authorize'=> 'Controller',//linea añadida
             'authenticate' => [
                 'Form' => [
                     'fields' => [
@@ -54,30 +58,26 @@ class AppController extends Controller
                 'controller' => 'bookmarks', // Controlador al que redirigir después de iniciar sesión correctamente
                 'action' => 'index'
             ],
-            'unauthorizedRedirect' => $this->referer() // If unauthorized, return them to page they were just on
-        ]);
+            'unauthorizedRedirect' => $this->referer() // no esta autorizado
+            ]);
 
         // Allow the display action so our pages controller
         // continues to work.
         $this->Auth->allow(['display']);
     }
-    /**
-     * Initialization hook method.
-     *
-     * Use this method to add common initialization code like loading components.
-     *
-     * e.g. `$this->loadComponent('FormProtection');`
-     *
-     * @return void
-     */
+    public function isAuthorized($user)
+    {
+        return false;
+    }
     /*public function initialize(): void
     {
         parent::initialize();
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-*/
+        */
         /*
+        
          * Enable the following component for recommended CakePHP form protection settings.
          * see https://book.cakephp.org/4/en/controllers/components/form-protection.html
          */

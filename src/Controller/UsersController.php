@@ -11,11 +11,6 @@ namespace App\Controller;
  */
 class UsersController extends AppController
 {
-    /* public function initialize()
-    {
-        parent::initialize();
-        $this->Auth->allow(['logout']);
-    } */
     public function isAuthorized($user)
     {
         $action = $this->request->getParam('action');
@@ -37,12 +32,6 @@ class UsersController extends AppController
         }
         return parent::isAuthorized($user);
     }
-    
-    public function logout()
-    {
-        $this->Flash->success('You are now logged out.');
-        return $this->redirect($this->Auth->logout());
-    }
     public function login()
     {
         if ($this->request->is('post')) {
@@ -53,6 +42,20 @@ class UsersController extends AppController
             }
             $this->Flash->error('Your username or password is incorrect.');
         }
+    }
+    public function initialize(): void
+    {
+        parent::initialize();
+        // Add the 'add' action to the allowed actions list.
+        $this->Auth->allow(['logout', 'add']);
+    } 
+
+    public function logout()
+    {
+        $this->Flash->success('You are now logged out.');
+        return $this->redirect($this->Auth->logout());
+        $logged_in=false;
+
     }
     /**
      * Index method

@@ -11,11 +11,6 @@ namespace App\Controller;
  */
 class TagsController extends AppController
 {
-    /* public function initialize()
-    {
-        parent::initialize();
-        $this->Auth->allow(['logout']);
-    } */
     public function isAuthorized($user)
     {
         $action = $this->request->getParam('action');
@@ -31,8 +26,8 @@ class TagsController extends AppController
 
         // Check that the bookmark belongs to the current user.
         $id = $this->request->getParam('pass.0');
-        $bookmark = $this->Bookmarks->get($id);
-        if ($bookmark->user_id == $user['id']) {
+        $tag = $this->Tags->get($id);
+        if ($tag->id == $user['id']) {
             return true;
         }
         return parent::isAuthorized($user);
@@ -72,7 +67,7 @@ class TagsController extends AppController
      */
     public function add()
     {
-        $tag = $this->Tags->newEmptyEntity($this->request->getData());
+        $tag = $this->Tags->newEmptyEntity();
         if ($this->request->is('post')) {
             $tag = $this->Tags->patchEntity($tag, $this->request->getData());
             if ($this->Tags->save($tag)) {

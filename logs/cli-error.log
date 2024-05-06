@@ -1,4 +1,4 @@
-2024-05-06 04:27:35 error: [Cake\Database\Exception\MissingConnectionException] Connection to Mysql could not be established: SQLSTATE[HY000] [2002] No such file or directory in /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Driver.php on line 144
+2024-05-03 21:42:47 error: [Cake\Database\Exception\MissingConnectionException] Connection to Mysql could not be established: SQLSTATE[HY000] [2002] No such file or directory in /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Database/Driver.php on line 144
 Exception Attributes: array (
   'driver' => 'Mysql',
   'reason' => 'SQLSTATE[HY000] [2002] No such file or directory',
@@ -32,14 +32,6 @@ Stack Trace:
 - /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Console/BaseCommand.php:190
 - /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Console/CommandRunner.php:334
 - /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Console/CommandRunner.php:172
-- /var/www/html/bookmarker/bin/cake.php:12
-- [main]:
-
-2024-05-06 05:17:03 error: [Error] Class "Router" not found in /var/www/html/bookmarker/config/routes.php on line 27
-Stack Trace:
-- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Http/BaseApplication.php:199
-- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Console/CommandRunner.php:397
-- /var/www/html/bookmarker/vendor/cakephp/cakephp/src/Console/CommandRunner.php:147
 - /var/www/html/bookmarker/bin/cake.php:12
 - [main]:
 
