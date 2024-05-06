@@ -1,4 +1,5 @@
 <?php
+$logged_in=false;
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -16,10 +17,12 @@
 
 $cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
+
+
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<?= $this->Flash->render() ?> <!-- este comando hace mostrar las advertencias -->
+    <?= $this->Flash->render() ?> <!--linea añadida -->
 
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,11 +41,22 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
     <nav class="top-nav">
         <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
+            <a href="<?= $this->Url->build('https://github.com/benjaminmurguia/bookmarker') ?>"><span>Github-UPDS</span>Project</a>
         </div>
         <div class="top-nav-links">
-            <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
-            <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a>
+            <a target="_blank" rel="noopener" href="http://localhost:8765/bookmarks">Bookmarks</a>
+            <a target="_blank" rel="noopener" href="http://localhost:8765/users">Users</a>
+            <a target="_blank" rel="noopener" href="http://localhost:8765/tags">Tags</a>
+            <?php
+    // Verificar si el usuario está logueado
+    if($logged_in) {
+        // El usuario está logueado, no imprimir el enlace de cierre de sesión
+    } else {
+        // El usuario no está logueado, imprimir el enlace de cierre de sesión
+        echo '<a href="http://localhost:8765/users/logout" style="text-decoration: none; color: #333; background-color: #f0f0f0; padding: 10px; border-radius: 5px;">Cerrar sesión</a>';
+    }
+    ?>
+
         </div>
     </nav>
     <main class="main">

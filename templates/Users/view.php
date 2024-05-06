@@ -7,11 +7,11 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Acciones') ?></h4>
-            <?= $this->Html->link(__('Editar Usuario'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Eliminar Usuario'), ['action' => 'delete', $user->id], ['confirm' => __('deseas eliminar  # {0}?', $user->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('Listar Usuarios'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('Nuevo Usuario'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+            <h4 class="heading"><?= __('Actions') ?></h4>
+            <?= $this->Html->link(__('Edit User'), ['action' => 'edit', $user->id], ['class' => 'side-nav-item']) ?>
+            <?= $this->Form->postLink(__('Delete User'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id), 'class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('List Users'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('New User'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
@@ -27,28 +27,28 @@
                     <td><?= $this->Number->format($user->id) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Creado') ?></th>
+                    <th><?= __('Created') ?></th>
                     <td><?= h($user->created) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Modificado') ?></th>
+                    <th><?= __('Modified') ?></th>
                     <td><?= h($user->modified) ?></td>
                 </tr>
             </table>
             <div class="related">
-                <h4><?= __('Marcadores Relacionados') ?></h4>
+                <h4><?= __('Related Bookmarks') ?></h4>
                 <?php if (!empty($user->bookmarks)) : ?>
                 <div class="table-responsive">
                     <table>
                         <tr>
                             <th><?= __('Id') ?></th>
-                            <th><?= __('IdUsuario') ?></th>
-                            <th><?= __('Título') ?></th>
+                            <th><?= __('User Id') ?></th>
+                            <th><?= __('Title') ?></th>
                             <th><?= __('Description') ?></th>
                             <th><?= __('Url') ?></th>
-                            <th><?= __('Creado') ?></th>
-                            <th><?= __('Modificado') ?></th>
-                            <th class="actions"><?= __('Acciones') ?></th>
+                            <th><?= __('Created') ?></th>
+                            <th><?= __('Modified') ?></th>
+                            <th class="actions"><?= __('Actions') ?></th>
                         </tr>
                         <?php foreach ($user->bookmarks as $bookmarks) : ?>
                         <tr>
@@ -60,9 +60,9 @@
                             <td><?= h($bookmarks->created) ?></td>
                             <td><?= h($bookmarks->modified) ?></td>
                             <td class="actions">
-                                <?= $this->Html->link(__('Vista'), ['controller' => 'Bookmarks', 'action' => 'view', $bookmarks->id]) ?>
-                                <?= $this->Html->link(__('Editar'), ['controller' => 'Bookmarks', 'action' => 'edit', $bookmarks->id]) ?>
-                                <?= $this->Form->postLink(__('Eliminar'), ['controller' => 'Bookmarks', 'action' => 'delete', $bookmarks->id], ['confirm' => __('Deseas eliminar? # {0}?', $bookmarks->id)]) ?>
+                                <?= $this->Html->link(__('View'), ['controller' => 'Bookmarks', 'action' => 'view', $bookmarks->id]) ?>
+                                <?= $this->Html->link(__('Edit'), ['controller' => 'Bookmarks', 'action' => 'edit', $bookmarks->id]) ?>
+                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Bookmarks', 'action' => 'delete', $bookmarks->id], ['confirm' => __('Are you sure you want to delete # {0}?', $bookmarks->id)]) ?>
                             </td>
                         </tr>
                         <?php endforeach; ?>

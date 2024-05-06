@@ -14,8 +14,9 @@
  * @var \App\View\AppView $this
  */
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//ES">
+<html lang="es">
 <head>
     <title><?= $this->fetch('title') ?></title>
 </head>

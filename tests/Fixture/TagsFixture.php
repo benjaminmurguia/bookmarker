@@ -21,8 +21,8 @@ class TagsFixture extends TestFixture
             [
                 'id' => 1,
                 'title' => 'Lorem ipsum dolor sit amet',
-                'created' => '2024-05-06 04:36:58',
-                'modified' => '2024-05-06 04:36:58',
+                'created' => '2024-05-03 21:47:02',
+                'modified' => '2024-05-03 21:47:02',
             ],
         ];
         parent::init();
